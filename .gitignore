@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 #API_Key
-.index.html
+config.js
 
 # C extensions
 *.so
