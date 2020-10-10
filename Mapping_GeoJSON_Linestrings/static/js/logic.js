@@ -40,12 +40,12 @@ let myStyle = {
 // Grabbing our GeoJSON data.
 d3.json(torontoData).then(function(data) {
     console.log(data);
-  // Creating a GeoJSON layer with the retrieved data.
-  L.geoJson(data, {
-      style: myStyle,
-      onEachFeature: function(feature, layer) {
-          layer.bindPopup()
-          .bindPopup("<h3>" + "Airline: " + feature.properties.airline + "</h3>" + " <hr/>" + "<h3>" + "Destination: " + feature.properties.dst + "</h3>");
+    // Creating a GeoJSON layer with the retrieved data.
+    L.geoJson(data, {
+        style: myStyle,
+        onEachFeature: function(feature, layer) {
+            layer.bindPopup()
+            .bindPopup("<h3>" + "Airline: " + feature.properties.airline + "</h3>" + " <hr/>" + "<h3>" + "Destination: " + feature.properties.dst + "</h3>");
       }
   }).addTo(map);
 });
